@@ -5,7 +5,6 @@ pipelineJob('boilerplate-pipeline') {
     triggers {
         scm('H/5 * * * *')
     }
-    descripition("Pipeline for repo")
     
     definition {
         cpsScm{
