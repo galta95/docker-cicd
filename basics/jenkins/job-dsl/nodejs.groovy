@@ -32,7 +32,7 @@ job('NodeJS Docker example') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('galta99/docker-cicd') //qa / dev
+            repositoryName('galta99') //qa / dev
             tag('${GIT_REVISION,length=9}')
             registryCredentials('galt99')
             forcePull(false)
