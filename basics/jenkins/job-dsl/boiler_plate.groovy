@@ -13,6 +13,7 @@ pipelineJob('boilerplate-pipeline') {
                 git{
                     remote{
                         url('git://github.com/galta95/docker-cicd.git')
+                        branches('master') 
                         }
                     }
                 }
