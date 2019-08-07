@@ -22,7 +22,7 @@ node {
       docker kill docker_test
       Port = $(docker inpect CONTAINER[docker_test])
       echo $Port
-      curl localhost -p $Port
+      curl -i localhost:$Port
       '''
      }
    }
