@@ -25,7 +25,7 @@ node {
    }                                     
    stage('docker build/push') {            
      docker.withRegistry('https://index.docker.io/v1/', 'galt99') {
-       def app = docker.build("wardviaene/docker-nodejs-demo:${commit_id}", './basics').push()
+       def app = docker.build("galt99/new:${commit_id}", './basics').push()
      }                                     
    }                                       
 }                                          
