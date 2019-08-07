@@ -30,6 +30,7 @@ job('NodeJS Docker example') {
     wrappers {
         nodejs('node_11') 
     }
+    buildContext("./basics/jenkins/Dockerfile")
     steps {
         dockerBuildAndPublish {
             repositoryName('galta99') //qa / dev
