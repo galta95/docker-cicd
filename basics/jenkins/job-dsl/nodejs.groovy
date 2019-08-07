@@ -34,7 +34,7 @@ job('NodeJS Docker example') {
         dockerBuildAndPublish {
             repositoryName('galta99/docker-cicd') //qa / dev
             tag('${GIT_REVISION,length=9}')
-            registryCredentials('dockerhub')
+            registryCredentials('galt99')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)
