@@ -20,9 +20,10 @@ node {
      sh label: '', script: '''
       docker run --rm -tid --name docker_test -p 3000 galt99/new:latest
       docker kill docker_test
-      Port = $(docker port CONTAINER[docker_test])
-      echo $Port
-      curl -i localhost:$Port
+      PORT=$(docker inspect docker_test | jq -r '.[].NetworkSettings.Ports."3000/tcp"[].HostPort')
+      echo $PORT
+      curl -i localhost:$PORT
+
       '''
      }
    }
