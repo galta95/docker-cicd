@@ -7,7 +7,7 @@ node {
    }
    stage('test') {
      nodejs(nodeJSInstallationName: 'node_11') {
-       sh "sudo cd ./basics/package.json"
+       sh "cd ./basics/package.json"
        sh 'npm install --only=dev'
        sh 'npm test'
      }
