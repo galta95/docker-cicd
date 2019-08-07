@@ -17,7 +17,7 @@ pipelineJob('boilerplate-pipeline') {
                         }
                     }
                 }
-            scriptPath("./basics/misc/Jenkinsfile")
+            scriptPath("/basics/misc/Jenkinsfile")
             }
         }
     }
