@@ -33,7 +33,7 @@ job('NodeJS Docker example') {
     steps {
         dockerBuildAndPublish {
             buildContext("./basics")
-            repositoryName('galta99') //qa / dev
+            repositoryName('galta99/new') //qa / dev
             tag('${GIT_REVISION,length=9}')
             registryCredentials('galt99')
             forcePull(false)
