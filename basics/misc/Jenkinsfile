@@ -21,7 +21,7 @@ node {
       docker run --rm -tid --name docker_test -p 3000 galt99/new:latest
       docker kill docker_test
       port = docker port CONTAINER docker_test
-      curl localhost -p $ port
+      curl localhost -p $port
       '''
      }
    }
