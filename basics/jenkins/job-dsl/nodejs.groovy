@@ -30,9 +30,9 @@ job('NodeJS Docker example') {
     wrappers {
         nodejs('node_11') 
     }
-    buildContext("./basics")
     steps {
         dockerBuildAndPublish {
+            buildContext("./basics")
             repositoryName('galta99') //qa / dev
             tag('${GIT_REVISION,length=9}')
             registryCredentials('galt99')
